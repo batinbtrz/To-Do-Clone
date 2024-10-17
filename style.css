@@ -15,6 +15,7 @@ body {
   background-color: var(--main-background-color);
   height: 100vh;
   overflow: hidden;
+  background: no-repeat url(background.jpg);
 }
 
 /* Buraya Genel Layout İçin Yazağın CSS Gelecek */
@@ -129,7 +130,7 @@ main {
       position: relative;
     }
     .search-input {
-      width: 89%;
+      width: 80%;
       padding: 8px 30px 8px 10px;
       background-color: #3c3c3c;
       border: none;
@@ -138,9 +139,9 @@ main {
       font-size: 14px;
     }
     .search-icon {
-      position: absolute;
-      right: 1px;
-      top: 50%;
+      position: absolute; /* İkonu göreceli konumlandır */
+      right: 10px; /* Sağdan 10px mesafe */
+      top: 50%; /* Yükseklik ortalaması için */
       transform: translateY(-50%);
       color: #888;
     }
@@ -208,7 +209,8 @@ main {
   /* Buraya TODO'lar için yazağın CSS Gelecek */
   .todos {
     display: grid;
-    grid-template-rows: 100px 100px auto;
+    grid-template-rows: 100px 100px;
+    width: 100%;
     font-family: var(--default-font);
     color: var(--default-font-color);
   }
@@ -220,7 +222,8 @@ main {
 
   .mision {
     display: grid;
-    grid-template-rows: 150px auto;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
   }
 
   .add-task-button {
@@ -251,21 +254,23 @@ main {
   }
 
   .mision-list {
-    width: 600px;
-    height: auto;
+    width: 80vw;
+    height: 100px;
     margin: 0;
   }
 
   .task-item {
     background-color: #2b2b2b;
-    border-radius: 6px;
+    border-radius: 5px;
+    margin-top: 12px;
     margin-bottom: 10px;
-    margin-left: 8rem;
-    margin-top: 4rem;
     padding: 15px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: calc(100% - 3rem); /* Sağ ve sol kenarlardan 3rem çıkarıldı */
+    margin-left: 3rem; /* Sol kenardan 3rem boşluk */
   }
 
   .task-item:hover {
